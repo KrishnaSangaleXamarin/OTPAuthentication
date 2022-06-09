@@ -35,7 +35,7 @@
                     <StackLayout>
                         <Frame CornerRadius="5" HeightRequest="10" BackgroundColor="WhiteSmoke">
                             <StackLayout Orientation="Horizontal" Margin="-15,-35,0,-35">
-                                <Label Text="+ 91 -" TextColor="Black" FontSize="18" FontAttributes="Bold"
+                                <Label Text="+ 91 |" TextColor="Black" FontSize="18" FontAttributes="Bold"
                                        Margin="15,27,0,0"/>
                                 <Entry HorizontalOptions="FillAndExpand" FontSize="18" FontAttributes="Bold"
                                        TextColor="Black" MaxLength="10" Keyboard="Numeric" Placeholder="** ** ** ** **"

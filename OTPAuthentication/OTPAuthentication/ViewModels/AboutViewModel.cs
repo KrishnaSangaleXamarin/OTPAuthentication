@@ -14,5 +14,9 @@ namespace OTPAuthentication.ViewModels
         }
 
         public ICommand OpenWebCommand { get; }
+
+
+        
+
     }
 }
