@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="OTPAuthentication.Views.AboutPage"
+            Shell.NavBarHasShadow="False"
+            BackgroundColor="White"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="White"
+            SelectedTabColor="#CD72FC"
+            xmlns:local="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs" 
+            xmlns:local1="clr-namespace:OTPAuthentication.Views">
+
+
+
+    <local:Tab1 Title="One" IconImageSource="threeblack.png"/>
+    <local:Tab2 Title="Two" IconImageSource="twoblack.png"/>
+    <local1:LoginPage Title="Login" IconImageSource="oneblack.png"/>
+
+
+
+
+    <!--<ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>-->
+
+    <!--<Grid>
+        <xct:TabView
+                TabStripPlacement="Bottom"
+                TabStripBackgroundColor="White"
+                TabStripHeight="60"
+                TabIndicatorColor="#CD72FC"
+                TabContentBackgroundColor="White">
+
+            <xct:TabViewItem
+                    Icon="oneblack.png"
+                    xct:IconTintColorEffect.TintColor="Gray"
+                    Text="Tab 1"
+                    TextColor="Black"
+                    TextColorSelected="#CD72FC"
+                    IconSelected="onepurple.png"
+                    FontSize="12">
+                <Grid >
+                    <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent1" />
+                </Grid>
+            </xct:TabViewItem>
+
+            <xct:TabViewItem
+                    Icon="twoblack.png"
+                    Text="Tab 2"
+                    FlyoutItem.IsVisible="False"
+                    TextColor="Black"
+                    IconSelected="twopurple.png"
+                    TextColorSelected="#CD72FC"
+                    FontSize="12">
+                <Grid>
+                    <Label    
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent2" />
+                </Grid>
+            </xct:TabViewItem>
+            <xct:TabViewItem
+                    Icon="threeblack.png"
+                    Text="Tab 3"
+                    TextColor="Black"
+                    FlyoutItem.IsVisible="False"
+                    IconSelected="threepurple.png"
+                    TextColorSelected="#CD72FC"
+                    FontSize="12">
+                <Grid>
+                    <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent3" />
+                </Grid>
+            </xct:TabViewItem>
+
+            <xct:TabViewItem
+                    Icon="fourblack.png"
+                    Text="Tab 4"
+                    FlyoutItem.IsVisible="False"
+                    IconSelected="fourpurple.png"
+                    TextColor="Black"
+                    TextColorSelected="#CD72FC"
+                    FontSize="12">
+                <Grid>
+                    <Label    
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent4" />
+                </Grid>
+            </xct:TabViewItem>
+        </xct:TabView>
+    </Grid>-->
+
+</TabbedPage>

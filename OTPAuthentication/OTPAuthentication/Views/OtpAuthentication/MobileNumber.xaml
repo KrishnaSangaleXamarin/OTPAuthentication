@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:vm="clr-namespace:OTPAuthentication.ViewModels.OtpAuthentication"
+             x:Class="OTPAuthentication.Views.OtpAuthentication.MobileNumber">
+
+    <ContentPage.BindingContext>
+        <vm:MobileNumberViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="0,40" Spacing="15" Padding="15">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <BoxView BackgroundColor="#CD72FC" HeightRequest="8" WidthRequest="65"
+                         CornerRadius="5"/>
+                <BoxView BackgroundColor="LightGray" HeightRequest="8" WidthRequest="65"
+                         CornerRadius="5"/>
+                <BoxView BackgroundColor="LightGray" HeightRequest="8" WidthRequest="65"
+                         CornerRadius="5"/>
+            </StackLayout>
+            <StackLayout Margin="0,25">
+                <Image Source="phone.png" HeightRequest="100" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Login with Mobile Number" TextColor="Black" FontSize="16"
+                       FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="Enter your mobile number we will sent 
+                       you OTP to verify" 
+                       TextColor="Gray" HorizontalTextAlignment="Center"
+                       FontAttributes="Bold" FontSize="16"/>
+            </StackLayout>
+
+            <Frame BackgroundColor="White" CornerRadius="5" xct:ShadowEffect.Color="Black">
+                <StackLayout>
+                    <StackLayout>
+                        <Frame CornerRadius="5" HeightRequest="10" BackgroundColor="WhiteSmoke">
+                            <StackLayout Orientation="Horizontal" Margin="-15,-35,0,-35">
+                                <Label Text="+ 91 -" TextColor="Black" FontSize="18" FontAttributes="Bold"
+                                       Margin="15,27,0,0"/>
+                                <Entry HorizontalOptions="FillAndExpand" FontSize="18" FontAttributes="Bold"
+                                       TextColor="Black" MaxLength="10" Keyboard="Numeric" Placeholder="** ** ** ** **"
+                                       TextChanged="Entry_TextChanged" x:Name="mobileNumber" Text="{Binding MobileNumber}"
+                                       Margin="10,0,0,0"/>
+                                <Image Source="check.png" HeightRequest="20" HorizontalOptions="End"
+                                       x:Name="checkImage" IsVisible="false"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Padding="40">
+                        <Button Text="Continue" BackgroundColor="#CD72FC" TextColor="White"
+                                CornerRadius="20" Command="{Binding SendNumber}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
