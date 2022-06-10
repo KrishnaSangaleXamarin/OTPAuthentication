@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OTPAuthentication.Views.OtpAuthentication.NotificationPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="Notification" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding Notifications}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0,8">
+                            <Frame BackgroundColor="#CD72FC" CornerRadius="5">
+                                <StackLayout Orientation="Horizontal" Spacing="20">
+                                    <StackLayout>
+                                        <ImageButton Source="{Binding Image}" BackgroundColor="White" 
+                                       HeightRequest="50" VerticalOptions="CenterAndExpand" Padding="8"
+                                                 CornerRadius="8" xct:ShadowEffect.Color="White"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Message}"/>
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="EndAndExpand" Margin="0,-10,0,0"
+                                                 Orientation="Horizontal">
+                                        <Image Source="timer.png" HeightRequest="15" BackgroundColor="Transparent"
+                                               Margin="0,-40,0,0"/>
+                                        <Label Text="{Binding Time, StringFormat='{}{0:hh\\:mm}'}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <StackLayout>
+                <Button Text="Load More" VerticalOptions="EndAndExpand" CornerRadius="20"
+                        xct:ShadowEffect.Color="#CD72FC"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

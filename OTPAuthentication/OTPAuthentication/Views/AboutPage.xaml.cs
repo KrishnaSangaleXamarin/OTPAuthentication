@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OTPAuthentication.ViewModels;
+using OTPAuthentication.Views.OtpAuthentication;
+using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,14 +12,13 @@ namespace OTPAuthentication.Views
         public AboutPage()
         {
             InitializeComponent();
-
-            CurrentPageChanged += MainPage_CurrentPageChanged;
-            Title = CurrentPage.Title;
+            this.BindingContext = new AboutViewModel();
         }
 
-        private void MainPage_CurrentPageChanged(object sender, EventArgs e)
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            Title = CurrentPage.Title;
+            Navigation.PushAsync(new NotificationPage());
         }
     }
 }

@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.Tab1"
-             Shell.NavBarIsVisible="True"
-             Title="One">
+             x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.Tab4">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
                 <StackLayout Orientation="Horizontal" BackgroundColor="#CD72FC" Padding="5">
-                    <Label Text="One" HorizontalOptions="CenterAndExpand" FontSize="20" 
+                    <Label Text="Four" HorizontalOptions="CenterAndExpand" FontSize="20" 
                        TextColor="White" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
             </StackLayout>

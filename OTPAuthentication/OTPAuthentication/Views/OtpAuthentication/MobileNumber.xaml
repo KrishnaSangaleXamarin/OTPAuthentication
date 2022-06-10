@@ -32,21 +32,24 @@
 
             <Frame BackgroundColor="White" CornerRadius="5" xct:ShadowEffect.Color="Black">
                 <StackLayout>
-                    <StackLayout>
+                    <StackLayout Margin="0,25,0,0">
                         <Frame CornerRadius="5" HeightRequest="10" BackgroundColor="WhiteSmoke">
                             <StackLayout Orientation="Horizontal" Margin="-15,-35,0,-35">
-                                <Label Text="+ 91 |" TextColor="Black" FontSize="18" FontAttributes="Bold"
+                                <Label Text="+ 91" TextColor="Black" FontSize="18" FontAttributes="Bold"
                                        Margin="15,27,0,0"/>
+                                <Label Text=" | " TextColor="White" Margin="15,15,0,0" FontSize="30"/>
                                 <Entry HorizontalOptions="FillAndExpand" FontSize="18" FontAttributes="Bold"
                                        TextColor="Black" MaxLength="10" Keyboard="Numeric" Placeholder="** ** ** ** **"
                                        TextChanged="Entry_TextChanged" x:Name="mobileNumber" Text="{Binding MobileNumber}"
                                        Margin="10,0,0,0"/>
                                 <Image Source="check.png" HeightRequest="20" HorizontalOptions="End"
                                        x:Name="checkImage" IsVisible="false"/>
+                                <Image Source="redcross.png" HeightRequest="20" HorizontalOptions="End"
+                                       x:Name="redcross" IsVisible="false"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
-                    <StackLayout Padding="40">
+                    <StackLayout Padding="30">
                         <Button Text="Continue" BackgroundColor="#CD72FC" TextColor="White"
                                 CornerRadius="20" Command="{Binding SendNumber}"/>
                     </StackLayout>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OTPAuthentication.Views.OtpAuthentication;
+using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -10,13 +12,15 @@ namespace OTPAuthentication.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            OpenWebCommand = new Command(OpenAsync);
         }
 
-        public ICommand OpenWebCommand { get; }
+        private void OpenAsync()
+        {
+            App.Current.MainPage.Navigation.PushAsync(new NotificationPage());
+        }
 
-
-        
-
+        public Command OpenWebCommand { get; }
+       
     }
 }

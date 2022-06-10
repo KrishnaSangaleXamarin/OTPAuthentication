@@ -4,20 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace OTPAuthentication.Views.OtpAuthentication
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OTPPage : ContentPage
+    public partial class NotificationPage : ContentPage
     {
-        
-        public OTPPage()
+        public NotificationPage()
         {
             InitializeComponent();
-            this.BindingContext = new OTPPageviewModel();
+            this.BindingContext = new NotificationPageViewModel();
         }
     }
 }

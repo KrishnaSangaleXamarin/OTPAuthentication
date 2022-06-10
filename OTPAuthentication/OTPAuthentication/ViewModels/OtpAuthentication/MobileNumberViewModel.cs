@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Xamarin.Essentials;
@@ -26,24 +27,11 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
             set { verifiedImage = value; }
         }
         public Command SendNumber { get; set; }
-        public Command ValidateMobileNumber { get; set; }
         public MobileNumberViewModel()
         {
             SendNumber = new Command(SendOtpToNumber);
-            //ValidateMobileNumber = new Command(ValidateEntry);
         }
 
-        //private void ValidateEntry(object obj)
-        //{
-        //    if (MobileNumber.Length < 10 || string.IsNullOrEmpty(MobileNumber))
-        //    {
-        //        VerifiedImage = "";
-        //    }
-        //    else
-        //    {
-        //        VerifiedImage = "check.png";
-        //    }
-        //}
 
         private void SendOtpToNumber(object obj)
         {
@@ -51,7 +39,7 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
             {
                 if (MobileNumber == null || string.IsNullOrEmpty(MobileNumber) || MobileNumber.Length <10)
                 {
-                    App.Current.MainPage.DisplayAlert("Aleart", "Enter Correct MobileNumber", "Ok");
+                    VerifiedImage = "redcross.png";
                 }
                 else
                 {

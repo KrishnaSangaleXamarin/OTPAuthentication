@@ -25,10 +25,12 @@ namespace OTPAuthentication.Views.OtpAuthentication
             if(mobileNumber.Text.Length == 10)
             {
                 checkImage.IsVisible = true;
+                redcross.IsVisible = false;
             }
             else
             {
                 checkImage.IsVisible = false;
+                redcross.IsVisible = true;
             }
         }
 

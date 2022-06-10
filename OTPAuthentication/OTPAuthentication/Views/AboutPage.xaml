@@ -9,19 +9,20 @@
             BarBackgroundColor="White"
             SelectedTabColor="#CD72FC" Title="About"
             UnselectedTabColor="Black"
-            xmlns:local="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs" 
-            xmlns:local1="clr-namespace:OTPAuthentication.Views">
+            xmlns:local="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs" >
 
+    
+    
     <TabbedPage.ToolbarItems>
-        <ToolbarItem IconImageSource="notify.png"/>
+        <ToolbarItem IconImageSource="notify.png" Clicked="ToolbarItem_Clicked"/>
     </TabbedPage.ToolbarItems>
 
 
     <TabbedPage.Children>
         <local:Tab1 Title="One" IconImageSource="oneblack.png"/>
         <local:Tab2 Title="Two" IconImageSource="twoblack.png"/>
-        <local:Tab1 Title="Three" IconImageSource="threeblack.png"/>
-        <local:Tab2 Title="Four" IconImageSource="fourblack.png"/>
+        <local:Tab3 Title="Three" IconImageSource="threeblack.png"/>
+        <local:Tab4 Title="Four" IconImageSource="fourblack.png"/>
     </TabbedPage.Children>
 
    

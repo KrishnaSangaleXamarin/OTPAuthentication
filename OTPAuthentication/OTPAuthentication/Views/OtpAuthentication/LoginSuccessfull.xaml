@@ -24,16 +24,10 @@
                 <Image Source="verified.png" HeightRequest="100" HorizontalOptions="CenterAndExpand"/>
                 <Label Text="Verified Successfully" TextColor="Black" FontSize="16"
                        FontAttributes="Bold" HorizontalOptions="Center"/>
-                <Label Text="Now you can Go to your Homepage" 
+                <Label Text="Now you can go to your Homepage" 
                        TextColor="Gray" HorizontalTextAlignment="Center"
                        FontAttributes="Bold" FontSize="16"/>
             </StackLayout>
-
-
-            <!--<StackLayout Padding="40" VerticalOptions="EndAndExpand">
-                <Button Text="Continue To HomePage" BackgroundColor="#CD72FC" TextColor="White"
-                                CornerRadius="20" Command="{Binding Navigate}"/>
-            </StackLayout>-->
 
         </StackLayout>
     </ContentPage.Content>

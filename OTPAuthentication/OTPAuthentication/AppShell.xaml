@@ -89,6 +89,27 @@
         <ShellContent Route="Logout" ContentTemplate="{DataTemplate local:LoginPage}" />
     </FlyoutItem>
 
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout Padding="20">
+                <StackLayout Padding="90,10">
+                    <ImageButton Source="profile.png" BackgroundColor="Transparent"
+                             BorderColor="#CD72FC" BorderWidth="2" CornerRadius="70"
+                                 Aspect="AspectFit"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Name :-"/>
+                    <Label Text="Krishna Sangale"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Mobile Number :-" />
+                    <Label Text="9579071435"/>
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <!--<MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>-->
@@ -120,11 +141,7 @@
 
     // This header appears at the top of the Flyout.
     // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header
-    <Shell.FlyoutHeaderTemplate>
-        <DataTemplate>
-            <Grid>ContentHere</Grid>
-        </DataTemplate>
-    </Shell.FlyoutHeaderTemplate>
+    
 
     // ItemTemplate is for ShellItems as displayed in a Flyout
     // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-flyoutitem-appearance
