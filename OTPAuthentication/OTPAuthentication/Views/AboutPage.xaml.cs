@@ -2,6 +2,7 @@
 using OTPAuthentication.Views.OtpAuthentication;
 using System;
 using System.ComponentModel;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

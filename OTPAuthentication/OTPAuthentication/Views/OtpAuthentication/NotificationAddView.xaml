@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OTPAuthentication.Views.OtpAuthentication.NotificationAddView"
+             Title="Add" Padding="10">
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Title"/>
+                <Entry Placeholder="Title" Text="{Binding Title}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Message"/>
+                <Entry Placeholder="Message" Text="{Binding Message}"/>
+            </StackLayout>
+
+            <Button Text="Save" BackgroundColor="#CD72FC" TextColor="White"
+                    CornerRadius="5" Command="{Binding AddNotification}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

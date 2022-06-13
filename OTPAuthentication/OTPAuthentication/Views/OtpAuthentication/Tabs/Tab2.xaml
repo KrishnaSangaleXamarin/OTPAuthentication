@@ -5,9 +5,10 @@
              Title="Two" Shell.NavBarIsVisible="True">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" BackgroundColor="#CD72FC" Padding="5">
-                <Label Text="Two" HorizontalOptions="CenterAndExpand" FontSize="20" 
-                       TextColor="White" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="15">
+                    <Label Text="Two" FontSize="20" />
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

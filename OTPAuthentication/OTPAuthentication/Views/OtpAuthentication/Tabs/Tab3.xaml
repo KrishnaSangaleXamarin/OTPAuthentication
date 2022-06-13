@@ -5,9 +5,8 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <StackLayout Orientation="Horizontal" BackgroundColor="#CD72FC" Padding="5">
-                    <Label Text="Three" HorizontalOptions="CenterAndExpand" FontSize="20" 
-                       TextColor="White" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Horizontal" Padding="15">
+                    <Label Text="Three" FontSize="20" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>

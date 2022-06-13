@@ -3,6 +3,7 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:OTPAuthentication.Views"
        Title="OTPAuthentication"
+       xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
        xmlns:local1="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs"
        x:Class="OTPAuthentication.AppShell">
 
@@ -85,26 +86,26 @@
     <FlyoutItem Title="Browse" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Logout" Icon="">
+    <FlyoutItem Title="Logout" Icon="logout.png">
         <ShellContent Route="Logout" ContentTemplate="{DataTemplate local:LoginPage}" />
     </FlyoutItem>
 
 
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <StackLayout Padding="20">
-                <StackLayout Padding="90,10">
+            <StackLayout Padding="20" BackgroundColor="#CD72FC" Margin="0,0,0,5">
+                <StackLayout Padding="112,10">
                     <ImageButton Source="profile.png" BackgroundColor="Transparent"
-                             BorderColor="#CD72FC" BorderWidth="2" CornerRadius="70"
-                                 Aspect="AspectFit"/>
+                                 BorderWidth="3" CornerRadius="80" BorderColor="White"
+                                 Aspect="AspectFill" HeightRequest="70"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Name :-"/>
-                    <Label Text="Krishna Sangale"/>
+                    <Label Text="Name :-" TextColor="White" />
+                    <Label Text="Krishna Sangale" TextColor="White" />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Mobile Number :-" />
-                    <Label Text="9579071435"/>
+                    <Label Text="Mobile Number :-" TextColor="White" />
+                    <Label Text="9579071435" TextColor="White"/>
                 </StackLayout>
             </StackLayout>
         </DataTemplate>

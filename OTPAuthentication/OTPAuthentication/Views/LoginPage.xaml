@@ -8,7 +8,8 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            
+            <Image Source="icon.png" VerticalOptions="Center" HeightRequest="200" 
+                           HorizontalOptions="CenterAndExpand"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -18,11 +19,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image Source="xamarin.png" VerticalOptions="Center" HeightRequest="100" 
-                               BackgroundColor="Transparent" Grid.ColumnSpan="2" Grid.Column="0"
-                           HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+                
                 <Button VerticalOptions="Center" Text="Login with Mobile Number" Command="{Binding LoginCommand}"
-                    BackgroundColor="#CD72FC" Grid.Column="1" Grid.Row="1" CornerRadius="5" HeightRequest="50"
+                    BackgroundColor="#CD72FC" Grid.Column="1" Grid.Row="0" CornerRadius="5"
                         FontSize="11"/>
             </Grid>
         </StackLayout>

@@ -3,18 +3,27 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="OTPAuthentication.Views.AboutPage"
             Shell.NavBarHasShadow="False"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
             BackgroundColor="White"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
+            xmlns:plugin="clr-namespace:Plugin.Badge.Abstractions;assembly=Plugin.Badge.Abstractions" 
             BarBackgroundColor="White"
-            SelectedTabColor="#CD72FC" Title="About"
+            SelectedTabColor="#CD72FC"
             UnselectedTabColor="Black"
             xmlns:local="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs" >
 
-    
-    
+
+    <Shell.TitleView>
+        <Image Source="xamarinicon.png" HeightRequest="10"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </Shell.TitleView>
+
+
+
     <TabbedPage.ToolbarItems>
-        <ToolbarItem IconImageSource="notify.png" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="notify.png" Clicked="ToolbarItem_Clicked" Order="Primary"/>
     </TabbedPage.ToolbarItems>
 
 

@@ -11,20 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace OTPAuthentication.Views.OtpAuthentication
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NotificationPage : ContentPage
+    public partial class NotificationAddView : ContentPage
     {
-        public NotificationPage()
+        public NotificationAddView()
         {
             InitializeComponent();
-            this.BindingContext = new NotificationPageViewModel();
+            this.BindingContext = new NotificationAddViewModel();
         }
-
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new NotificationAddView());
-        }
-
-
-       
     }
 }
