@@ -9,15 +9,15 @@
         <StackLayout>
             <StackLayout>
                 <Label Text="Title"/>
-                <Entry Placeholder="Title" Text="{Binding Title}"/>
+                <Entry Placeholder="Title" x:Name="title"/>
             </StackLayout>
             <StackLayout>
                 <Label Text="Message"/>
-                <Entry Placeholder="Message" Text="{Binding Message}"/>
+                <Entry Placeholder="Message" Text="" x:Name="message"/>
             </StackLayout>
 
             <Button Text="Save" BackgroundColor="#CD72FC" TextColor="White"
-                    CornerRadius="5" Command="{Binding AddNotification}"/>
+                    CornerRadius="5" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

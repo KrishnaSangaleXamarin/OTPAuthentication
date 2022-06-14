@@ -32,13 +32,7 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
 
         private void AddItems(object obj)
         {
-            Notifications = new ObservableCollection<Notification>();
-            Notifications.Add(new Notification
-            {
-                Title = Title,
-                Message = Message
-            });
-            App.Current.MainPage.Navigation.PopAsync();
+           
         }
     }
 }

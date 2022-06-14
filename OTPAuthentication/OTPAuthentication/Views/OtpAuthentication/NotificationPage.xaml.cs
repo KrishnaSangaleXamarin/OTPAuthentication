@@ -1,4 +1,6 @@
-﻿using OTPAuthentication.ViewModels.OtpAuthentication;
+﻿using OTPAuthentication.Models;
+using OTPAuthentication.ViewModels.OtpAuthentication;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +15,12 @@ namespace OTPAuthentication.Views.OtpAuthentication
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotificationPage : ContentPage
     {
+        Notification Notification;
         public NotificationPage()
         {
             InitializeComponent();
-            this.BindingContext = new NotificationPageViewModel();
+
+            
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
@@ -24,7 +28,22 @@ namespace OTPAuthentication.Views.OtpAuthentication
             Navigation.PushAsync(new NotificationAddView());
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
 
-       
+
+            //creating connection to database for get the data
+            var connection = new SQLiteConnection(App.DatabaseLocation);
+            connection.CreateTable<Notification>();
+
+            //fetching data from database
+            var posts = connection.Table<Notification>().ToList();
+            MyList.ItemsSource = posts;
+
+            var count = connection.Table<Notification>().Count();
+            toolbarItems.Text = count.ToString();
+        }
+
     }
 }
