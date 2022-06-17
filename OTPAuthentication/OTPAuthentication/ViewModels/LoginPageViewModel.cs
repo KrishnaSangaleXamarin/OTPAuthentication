@@ -3,11 +3,11 @@ using Xamarin.Forms;
 
 namespace OTPAuthentication.ViewModels
 {
-    public class LoginViewModel : BaseViewModel
+    public class LoginPageViewModel : BaseViewModel
     {
         public Command LoginCommand { get; }
 
-        public LoginViewModel()
+        public LoginPageViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
         }

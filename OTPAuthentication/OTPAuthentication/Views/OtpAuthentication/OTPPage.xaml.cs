@@ -17,7 +17,6 @@ namespace OTPAuthentication.Views.OtpAuthentication
         public OTPPage()
         {
             InitializeComponent();
-            this.BindingContext = new OTPPageviewModel();
         }
     }
 }

@@ -16,27 +16,6 @@ namespace OTPAuthentication.Views
         public AboutPage()
         {
             InitializeComponent();
-            this.BindingContext = new AboutViewModel();
-        }
-
-
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new NotificationPage());
-        }
-
-        private void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new NotificationPage());
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            var connection = new SQLiteConnection(App.DatabaseLocation);
-            connection.CreateTable<Notification>();
-            var count = connection.Table<Notification>().Count();
-            notificationCount.Text = count.ToString();
         }
     }
 }

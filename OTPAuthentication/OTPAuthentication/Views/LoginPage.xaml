@@ -5,7 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" Title="LoginPage"
              x:Class="OTPAuthentication.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             xmlns:base="clr-namespace:OTPAuthentication.ViewModels.Base"
+             base:ViewModelLocator.AutoWireViewModel="True">
+    
+    
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
             <Image Source="icon.png" VerticalOptions="Center" HeightRequest="200" 

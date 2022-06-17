@@ -44,7 +44,7 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
                 else
                 {
                     string accountSid = "ACac03f357a0ee55fcd0a9860ce87ba499";
-                    string authToken = "86e4df842d0dce21865551bbfce117cb";
+                    string authToken = "0b8b1b90c501a3f823fe30dec036936f";
 
 
 

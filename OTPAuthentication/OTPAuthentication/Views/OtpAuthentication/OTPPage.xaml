@@ -4,12 +4,10 @@
              Shell.NavBarIsVisible="False"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:vm="clr-namespace:OTPAuthentication.ViewModels.OtpAuthentication"
-             x:Class="OTPAuthentication.Views.OtpAuthentication.OTPPage">
+             x:Class="OTPAuthentication.Views.OtpAuthentication.OTPPage"
+             xmlns:base="clr-namespace:OTPAuthentication.ViewModels.Base"
+             base:ViewModelLocator.AutoWireViewModel="True">
 
-
-    <ContentPage.BindingContext>
-        <vm:OTPPageviewModel/>
-    </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <StackLayout Margin="0,40" Spacing="15" Padding="15">

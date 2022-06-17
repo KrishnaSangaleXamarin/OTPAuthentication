@@ -10,7 +10,9 @@
             BarBackgroundColor="White"
             SelectedTabColor="#CD72FC"
             UnselectedTabColor="Black"
-            xmlns:local="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs" >
+            xmlns:local="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs" 
+            xmlns:base="clr-namespace:OTPAuthentication.ViewModels.Base"
+            base:ViewModelLocator.AutoWireViewModel="True">
 
 
     <Shell.TitleView>
@@ -19,9 +21,9 @@
                HorizontalOptions="Center" Margin="-55,13,0,0"
                VerticalOptions="Center" xct:IconTintColorEffect.TintColor="White"/>
             <ImageButton Source="notify.png" Margin="265,-35,0,0" BackgroundColor="Transparent" HeightRequest="30"
-                         xct:IconTintColorEffect.TintColor="White" Clicked="ImageButton_Clicked"
+                         xct:IconTintColorEffect.TintColor="White" Command="{Binding GoToNotificationPage}"
                          HorizontalOptions="EndAndExpand"/>
-            <Label Text="2" TextColor="#CD72FC" x:Name="notificationCount" BackgroundColor="White" 
+            <Label Text="{Binding TotalCount}" TextColor="#CD72FC" BackgroundColor="White" 
                    xct:CornerRadiusEffect.CornerRadius="30" HorizontalOptions="EndAndExpand"
                    Margin="-2,-43,0,0" Padding="3,-2,3,-2"/>
         </StackLayout>

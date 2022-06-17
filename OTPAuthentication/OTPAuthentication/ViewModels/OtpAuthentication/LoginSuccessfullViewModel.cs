@@ -13,6 +13,7 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
         public LoginSuccessfullViewModel()
         {
             Navigate = new Command(NavigateToMobileNumberPage);
+            NavigateToNextPage();
         }
 
         private async void NavigateToMobileNumberPage(object obj)

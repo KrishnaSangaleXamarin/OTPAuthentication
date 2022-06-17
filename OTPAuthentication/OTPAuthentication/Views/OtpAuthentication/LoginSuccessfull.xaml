@@ -3,12 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:vm="clr-namespace:OTPAuthentication.ViewModels.OtpAuthentication"
              Shell.NavBarIsVisible="False"
-             x:Class="OTPAuthentication.Views.OtpAuthentication.LoginSuccessfull">
+             x:Class="OTPAuthentication.Views.OtpAuthentication.LoginSuccessfull"
+             xmlns:base="clr-namespace:OTPAuthentication.ViewModels.Base"
+             base:ViewModelLocator.AutoWireViewModel="True">
 
-
-    <ContentPage.BindingContext>
-        <vm:LoginSuccessfullViewModel/>
-    </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <StackLayout Margin="0,40" Spacing="15" Padding="15">

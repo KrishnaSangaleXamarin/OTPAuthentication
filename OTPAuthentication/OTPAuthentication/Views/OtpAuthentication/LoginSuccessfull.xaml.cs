@@ -16,18 +16,6 @@ namespace OTPAuthentication.Views.OtpAuthentication
         public LoginSuccessfull()
         {
             InitializeComponent();
-            this.BindingContext = new LoginSuccessfullViewModel();
-            NavigateToNextPage();
         }
-
-
-        public async void NavigateToNextPage()
-        {
-            await Task.Delay(2000);
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
-        }
-            
-        
-
     }
 }

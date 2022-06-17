@@ -4,11 +4,10 @@
              Shell.NavBarIsVisible="False"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
              xmlns:vm="clr-namespace:OTPAuthentication.ViewModels.OtpAuthentication"
-             x:Class="OTPAuthentication.Views.OtpAuthentication.MobileNumber">
+             x:Class="OTPAuthentication.Views.OtpAuthentication.MobileNumber"
+             xmlns:base="clr-namespace:OTPAuthentication.ViewModels.Base"
+             base:ViewModelLocator.AutoWireViewModel="True">
 
-    <ContentPage.BindingContext>
-        <vm:MobileNumberViewModel/>
-    </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <StackLayout Margin="0,40" Spacing="15" Padding="15">
@@ -39,7 +38,7 @@
                                        Margin="15,27,0,0"/>
                                 <Label Text=" | " TextColor="White" Margin="15,15,0,0" FontSize="30"/>
                                 <Entry HorizontalOptions="FillAndExpand" FontSize="18" FontAttributes="Bold"
-                                       TextColor="Black" MaxLength="10" Keyboard="Numeric" Placeholder="** ** ** ** **"
+                                       TextColor="Black" MaxLength="10" Keyboard="Numeric" Placeholder=""
                                        TextChanged="Entry_TextChanged" x:Name="mobileNumber" Text="{Binding MobileNumber}"
                                        Margin="10,0,0,0"/>
                                 <Image Source="check.png" HeightRequest="20" HorizontalOptions="End"

@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace OTPAuthentication.ViewModels.OtpAuthentication
 {
-    public class OTPPageviewModel : BaseViewModel
+    public class OTPPageViewModel : BaseViewModel
     {
         private string numberOne;
         private string numberTwo;
@@ -19,25 +19,26 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
 
         private string FullOtp;
         private string otpNumber;
-        private string mobileNumber = Preferences.Get("MobileNumber", string.Empty);
+        private string mobileNumber ;
 
         public Command VerifyOTP { get; set; }
-        public OTPPageviewModel()
+        public OTPPageViewModel()
         {
             
             VerifyOTP = new Command(WriteOTP);
+            MobileNumber = Preferences.Get("MobileNumber", string.Empty);
         }
 
 
         private async void WriteOTP(object obj)
         {
             var otpNumber = $"{NumberOne}{NumberTwo}{NumberThree}{NumberFour}{NumberFive}{NumberSix}";
-            var savedNumber = Preferences.Get("Number", FullOtp);
-            if(otpNumber != savedNumber)
+            FullOtp = Preferences.Get("Number", string.Empty);
+            if(otpNumber != FullOtp)
             {
                 await App.Current.MainPage.DisplayAlert("Aleart", "OTP is Not Correct", "Ok");
             }
-            else if (otpNumber == savedNumber)
+            else if (otpNumber == FullOtp)
             {
                 await App.Current.MainPage.Navigation.PushAsync(new LoginSuccessfull());
             }

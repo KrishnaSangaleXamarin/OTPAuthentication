@@ -16,8 +16,6 @@ namespace OTPAuthentication.Views.OtpAuthentication
         public MobileNumber()
         {
             InitializeComponent();
-            this.BindingContext = new MobileNumberViewModel();
-            Preferences.Set("Number", mobileNumber.Text);
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
