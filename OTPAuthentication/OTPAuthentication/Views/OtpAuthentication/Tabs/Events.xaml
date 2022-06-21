@@ -2,13 +2,73 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.Events"
-             Shell.NavBarIsVisible="True">
+             Shell.NavBarIsVisible="True"
+             xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar"
+             xmlns:base="clr-namespace:OTPAuthentication.ViewModels.Base" 
+             xmlns:controls1="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs"
+             base:ViewModelLocator.AutoWireViewModel="True"
+             x:Name="events">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="15">
+                <Label Text="All Events" FontSize="20" />
+            </StackLayout>
             <StackLayout>
-                <StackLayout Orientation="Horizontal" Padding="15">
-                    <Label Text="All Events" FontSize="20" />
-                </StackLayout>
+                <controls:Calendar
+                    Margin="0,-20,0,0"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    CalendarLayout="Week"
+                    SwipeToChangeMonthEnabled="True"
+                    EventIndicatorColor="Black"
+                    Events="{Binding Events}"
+                    SelectedDayTextColor="Black"
+                    EventIndicatorSelectedTextColor="Black"
+                    TodayOutlineColor="#CD72FC"
+                    SelectedDateColor="Black"
+                    SelectedTodayTextColor="Black"
+                    EventIndicatorSelectedColor="White"
+                    SelectedDayBackgroundColor="LightGray"
+                    FooterArrowVisible="False"
+                    SwipeUpToHideEnabled="False"
+                    EventIndicatorTextColor="Black"
+                    x:Name="MyCalendar" TodayTextColor="Green"
+                    SelectedDate="{Binding Today}"
+         >
+
+                    <controls:Calendar.HeaderSectionTemplate>
+                        <controls1:CalendarHeader />
+                    </controls:Calendar.HeaderSectionTemplate>
+
+
+                    <controls:Calendar.FooterSectionTemplate>
+                        <DataTemplate>
+                            <controls1:CalendarFooter />
+                        </DataTemplate>
+                    </controls:Calendar.FooterSectionTemplate>
+
+
+                    <controls:Calendar.EventTemplate>
+                        <DataTemplate>
+                            <StackLayout
+                                Padding="15">
+                                <Label
+                                    Text="{Binding Name}"
+                                    FontAttributes="Bold"
+                                    FontSize="Medium" />
+                                <Label
+                                    Text="{Binding Description}"
+                                    FontSize="Small"
+                                    LineBreakMode="WordWrap" />
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding BindingContext.EventSelectedCommand, Source={x:Reference events}}" CommandParameter="{Binding .}" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                    </controls:Calendar.EventTemplate>
+
+                </controls:Calendar>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

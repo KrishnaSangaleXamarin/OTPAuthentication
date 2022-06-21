@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataTemplate xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.CalendarHeader">
+
+    <Grid
+        Margin="0,2"
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        IsVisible="{Binding ShowMonthPicker}"
+        VerticalOptions="Start">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Label
+            Grid.Column="1"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Margin="-70,0,0,0"
+            HorizontalOptions="Start"
+            TextColor="Black"
+            VerticalOptions="Center"
+            x:Name="MyDate">
+
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding LayoutUnitText, Mode=TwoWay, StringFormat='{MMM}'}" x:Name="layoutUnitText"/>
+                    <Span Text=" "/>
+                    <Span Text="⌵"/>
+                </FormattedString>
+            </Label.FormattedText>
+
+        </Label>
+    </Grid>
+</DataTemplate>

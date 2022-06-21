@@ -8,7 +8,7 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             BarBackgroundColor="White"
-            SelectedTabColor="#CD72FC"
+            SelectedTabColor="#CD72FC" android:SwipeView.SwipeTransitionMode="Reveal"
             UnselectedTabColor="Black"
             xmlns:local="clr-namespace:OTPAuthentication.Views.OtpAuthentication.Tabs" 
             xmlns:base="clr-namespace:OTPAuthentication.ViewModels.Base"
