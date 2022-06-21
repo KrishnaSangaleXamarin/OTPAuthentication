@@ -18,6 +18,18 @@
     <Compile Update="Views\OtpAuthentication\NotificationAdd.xaml.cs">
       <DependentUpon>NotificationAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\OtpAuthentication\Tabs\Events.xaml.cs">
+      <DependentUpon>Events.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OtpAuthentication\Tabs\Mails.xaml.cs">
+      <DependentUpon>Mails.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OtpAuthentication\Tabs\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OtpAuthentication\Tabs\Others.xaml.cs">
+      <DependentUpon>Others.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -36,16 +48,16 @@
     <EmbeddedResource Update="Views\OtpAuthentication\OTPPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Tab1.xaml">
+    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Events.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Tab2.xaml">
+    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Mails.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Tab3.xaml">
+    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Add.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Tab4.xaml">
+    <EmbeddedResource Update="Views\OtpAuthentication\Tabs\Others.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

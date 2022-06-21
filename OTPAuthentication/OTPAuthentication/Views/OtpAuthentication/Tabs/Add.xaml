@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.Tab4">
+             x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.Add">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
                 <StackLayout Orientation="Horizontal" Padding="15">
-                    <Label Text="Four" FontSize="20" />
+                    <Label Text="Add" FontSize="20" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.Tab2"
-             Title="Two" Shell.NavBarIsVisible="True">
+             x:Class="OTPAuthentication.Views.OtpAuthentication.Tabs.Events"
+             Shell.NavBarIsVisible="True">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
                 <StackLayout Orientation="Horizontal" Padding="15">
-                    <Label Text="Two" FontSize="20" />
+                    <Label Text="All Events" FontSize="20" />
                 </StackLayout>
             </StackLayout>
         </StackLayout>

@@ -32,10 +32,10 @@
 
 
     <TabbedPage.Children>
-        <local:Tab1 Title="One" IconImageSource="oneblack.png"/>
-        <local:Tab2 Title="Two" IconImageSource="twoblack.png"/>
-        <local:Tab3 Title="Three" IconImageSource="threeblack.png"/>
-        <local:Tab4 Title="Four" IconImageSource="fourblack.png"/>
+        <local:Events Title="Events" IconImageSource="oneblack.png"/>
+        <local:Mails Title="Mails" IconImageSource="twoblack.png"/>
+        <local:Add Title="Add" IconImageSource="threeblack.png"/>
+        <local:Others Title="Others" IconImageSource="fourblack.png"/>
     </TabbedPage.Children>
 
    

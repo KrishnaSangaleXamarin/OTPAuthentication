@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace OTPAuthentication.Views.OtpAuthentication.Tabs
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tab1 : ContentPage
+    public partial class Others : ContentPage
     {
-        public Tab1()
+        public Others()
         {
             InitializeComponent();
         }
