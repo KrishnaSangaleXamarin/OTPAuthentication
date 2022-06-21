@@ -19,12 +19,5 @@ namespace OTPAuthentication.Views.OtpAuthentication
         {
             InitializeComponent();
         }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            var connection = new SQLiteConnection(App.DatabaseLocation);
-            connection.CreateTable<Notification>();
-            MyList.ItemsSource = connection.Table<Notification>().ToList();
-        }
     }
 }

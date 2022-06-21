@@ -17,20 +17,5 @@ namespace OTPAuthentication.Views.OtpAuthentication
         {
             InitializeComponent();
         }
-
-        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if(mobileNumber.Text.Length == 10)
-            {
-                checkImage.IsVisible = true;
-                redcross.IsVisible = false;
-            }
-            else
-            {
-                checkImage.IsVisible = false;
-                redcross.IsVisible = true;
-            }
-        }
-
     }
 }

@@ -46,7 +46,7 @@
             </ScrollView>
             <StackLayout>
                 <Button Text="Load More" VerticalOptions="EndAndExpand" CornerRadius="20"
-                        xct:ShadowEffect.Color="#CD72FC" Command="{Binding LoadAllItems}" Clicked="Button_Clicked"/>
+                        xct:ShadowEffect.Color="#CD72FC" Command="{Binding LoadAllItems}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

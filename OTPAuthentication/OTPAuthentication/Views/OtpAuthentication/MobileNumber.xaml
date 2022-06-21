@@ -37,14 +37,17 @@
                                 <Label Text="+ 91" TextColor="Black" FontSize="18" FontAttributes="Bold"
                                        Margin="15,27,0,0"/>
                                 <Label Text=" | " TextColor="White" Margin="15,15,0,0" FontSize="30"/>
-                                <Entry HorizontalOptions="FillAndExpand" FontSize="18" FontAttributes="Bold"
-                                       TextColor="Black" MaxLength="10" Keyboard="Numeric" Placeholder=""
-                                       TextChanged="Entry_TextChanged" x:Name="mobileNumber" Text="{Binding MobileNumber}"
-                                       Margin="10,0,0,0"/>
-                                <Image Source="check.png" HeightRequest="20" HorizontalOptions="End"
-                                       x:Name="checkImage" IsVisible="false"/>
-                                <Image Source="redcross.png" HeightRequest="20" HorizontalOptions="End"
-                                       x:Name="redcross" IsVisible="false"/>
+
+                                <Entry HorizontalOptions="FillAndExpand" FontSize="20" FontAttributes="Bold" MaxLength="10" WidthRequest="150"
+                                    TextColor="Black" Text="{Binding MobileNumber}" Keyboard="Telephone" x:Name="MobNo"
+                                    Margin="-12,-34,0,-35">
+                                    <Entry.Behaviors>
+                                        <xct:EventToCommandBehavior
+                                            EventName="TextChanged"
+                                            Command="{Binding CommandValidate}"/>
+                                    </Entry.Behaviors>
+                                </Entry>
+                                <Image Source="{Binding VerifyImage}" HorizontalOptions="End" HeightRequest="20"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>

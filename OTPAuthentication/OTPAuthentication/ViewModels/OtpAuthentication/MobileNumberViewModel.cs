@@ -18,7 +18,20 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
         {
             get { return mobileNumber; }
             set { mobileNumber = value; }
-        } 
+        }
+
+        public string verifyImage { get; set; }
+        public string VerifyImage
+        {
+            get { return verifyImage; }
+            set
+            {
+                verifyImage = value;
+                OnPropertyChanged();
+            }
+        }
+
+
 
         public string MyrecentOTP { get; set; }
         public string VerifiedImage
@@ -27,11 +40,28 @@ namespace OTPAuthentication.ViewModels.OtpAuthentication
             set { verifiedImage = value; }
         }
         public Command SendNumber { get; set; }
+        public Command CommandValidate { get; set; }
         public MobileNumberViewModel()
         {
             SendNumber = new Command(SendOtpToNumber);
+            CommandValidate = new Command(() => VerifyMobileNumber());
         }
 
+        private void VerifyMobileNumber()
+        {
+
+            if (MobileNumber.Length == 10)
+            {
+                VerifyImage = "verified.png";
+            }
+            else
+            {
+                VerifyImage = "redcross.png";
+            }
+
+
+
+        }
 
         private void SendOtpToNumber(object obj)
         {
